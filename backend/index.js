@@ -25,9 +25,15 @@ app.use("/api/v1/movie",protectRoute,movieRoutes);
 app.use("/api/v1/tv",protectRoute,tvRoutes);
 app.use("/api/v1/search",protectRoute,searchRoutes);
 
-app.use(express.static(path.resolve(__dirname, "../frontend/dist")));
-app.get("*", (req, res) => {   
-    res.sendFile(path.join(__dirname, "../frontend", "dist", "index.html"));
+app.use(express.static(path.join(__dirname, "../frontend/dist")));
+app.get("*", (req, res) => {
+    const indexPath = path.resolve(__dirname, "../frontend/dist/index.html");
+    res.sendFile(indexPath, (err) => {
+        if (err) {
+            console.error("Error sending index.html:", err.message, err.code);
+            res.status(err.status || 500).send(err.message);
+        }
+    });
 });
 
 app.listen(PORT,()=>{
