@@ -4,8 +4,8 @@
   "main": "backend/index.js",
   "scripts": {
     "dev": "node backend/index.js",
-    "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend",
-    "start": "node backend/index.js"
+    "build": "NODE_ENV=production && npm install && npm install --prefix frontend && npm run build --prefix frontend",
+    "start": "NODE_ENV=production && node backend/index.js"
   },
   "keywords": [],
   "author": "",
