@@ -6,7 +6,7 @@ in frontend terminal enter npm run build a dist folder gets created in the front
 
 under package.json of netflix_clone include this in scripts-
 "dev": "NODE_ENV=development node --watch backend/index.js",
-"start": "NODE_ENV=production backend/index.js",
+"start": "NODE_ENV=production node backend/index.js",
 "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend"
 
 Under index.js-
