@@ -3,15 +3,12 @@
   "version": "1.0.0",
   "main": "backend/index.js",
   "scripts": {
-<<<<<<< HEAD
+
     "dev": "nodemon backend/index.js",
 		"start": "node backend/index.js",
 		"build": "npm install && npm install --prefix frontend && npm run build --prefix frontend"
-=======
-    "dev": "node backend/index.js",
-    "build": "NODE_ENV=production && npm install && npm install --prefix frontend && npm run build --prefix frontend",
-    "start": "NODE_ENV=production && node backend/index.js"
->>>>>>> cbf524eb7a027214b53355d23a6c630504394f4c
+
+
   },
   "keywords": [],
   "author": "",

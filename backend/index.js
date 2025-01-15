@@ -27,16 +27,16 @@ app.use("/api/v1/search", protectRoute, searchRoutes);
 app.use(express.static(path.join(__dirname, "../frontend/dist")));
 
 app.get("*", (req, res) => {
-<<<<<<< HEAD
+
 	res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html"));
 });
 
 app.listen(PORT, () => {
 	console.log("Server started at http://localhost:" + PORT);
 	connectDB();
-=======
+
     res.sendFile(path.join(__dirname, "../frontend/dist/index.html"));
->>>>>>> cbf524eb7a027214b53355d23a6c630504394f4c
+
 });
 
 
