@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 TO deploy the code-
 
 Watch the deployment part in the video
@@ -51,4 +52,6 @@ Change the build command - npm run build
 Change the run command - npm run start
 
 
+=======
+>>>>>>> cbf524eb7a027214b53355d23a6c630504394f4c
 
